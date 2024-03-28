@@ -1,0 +1,124 @@
+### REGISTER USER API
+POST http://localhost:8000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "ilmantest",
+    "password" : "rahasia",
+    "name" : "ilma nur"
+}
+
+### LOGIN USER API
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "ilmantest",
+    "password" : "rahasia"
+}
+
+### GET CURRENT USER API
+GET http://localhost:8000/api/users/getupdate
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Accept: application/json
+
+### UPDATE CURRENT USER API
+PATCH http://localhost:8000/api/users/getupdate
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name" : "ilma nur hidayah"
+}
+
+### LOGOUT USER API
+DELETE http://localhost:8000/api/users/logout
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Accept: application/json
+
+### CREATE CONTACT API
+POST http://localhost:8000/api/contacts
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Content-Type: application/json
+Accept: application/json
+
+{
+    "first_name" : "Syafiq",
+    "last_name" : "Mahendra",
+    "email" : "syafiq@gmail.com",
+    "phone" : "08234785"
+}
+
+### GET CONTACT API ID #1
+GET http://localhost:8000/api/contacts/1
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Accept: application/json
+
+### UPDATE CONTACT API ID #1
+PUT http://localhost:8000/api/contacts/1
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Content-Type: application/json
+Accept: application/json
+
+{
+    "first_name" : "Salsabilla",
+    "last_name" : "Zahra",
+    "email" : "zahra@gmail.com",
+    "phone" : "08123456"
+}
+
+### GET CONTACT API ID #1
+GET http://localhost:8000/api/contacts/1
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Accept: application/json
+
+### SEARCH CONTACT API
+GET http://localhost:8000/api/contacts
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Accept: application/json
+
+### CREATE ADDRESS API
+POST http://localhost:8000/api/contacts/1/addresses
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Content-Type: application/json
+Accept: application/json
+
+{
+    "street" : "Jl. Harmoni",
+    "city" : "Sidorajo",
+    "province" : "Jawa Timur",
+    "country" : "Indonesia",
+    "postal_code" : "61246"
+}
+
+### GET ADDRESS API #3
+GET http://localhost:8000/api/contacts/1/addresses/3
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Accept: application/json
+
+### UPDATE ADDRESS API #3
+PUT http://localhost:8000/api/contacts/1/addresses/3
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Content-Type: application/json
+Accept: application/json
+
+{
+    "street" : "Jl. Bersama",
+    "city" : "Surabaya",
+    "province" : "Jawa Timur",
+    "country" : "Indonesia",
+    "postal_code" : "61214"
+}
+
+### REMOVE ADDRESS API #2
+DELETE  http://localhost:8000/api/contacts/1/addresses/2
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Accept: application/json
+
+### LIST ADDRESS API 
+GET http://localhost:8000/api/contacts/1/addresses
+Authorization: 996f9cef-f4a6-4779-b1cf-d5459c7c55b8
+Accept: application/json
